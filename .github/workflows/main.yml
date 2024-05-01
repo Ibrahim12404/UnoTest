@@ -21,7 +21,7 @@ jobs:
     - name: Restore Dependencies
       run: dotnet restore ./UnoTest/UnoTest.csproj
     - name: Build 
-      run: dotnet build ./UnoTest/UnoTest.csproj --no-restore -f $framework -c $config -p:WasmShellWebAppBasePath=UnoTest/
+      run: dotnet build ./UnoTest/UnoTest.csproj --no-restore -f $framework -c $config -p:WasmShellWebAppBasePath=./
     - name: Publish Artifacts
       uses: actions/upload-artifact@v4
       if: github.event_name == 'workflow_dispatch' # Only deploy if Workflow manually ran
