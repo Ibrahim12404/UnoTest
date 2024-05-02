@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Build
     env:
-      config: 'Debug'
+      config: 'Release'
       framework: 'net8.0-browserwasm'
     steps:
     - uses: actions/checkout@v4
